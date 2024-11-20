@@ -42,7 +42,7 @@ public class PoiService {
         List<PoiEntity> pointOfInterest = poiRepository.findPoiEntitiesNear(allPoiNear.x(), allPoiNear.y(), allPoiNear.d_max());
 
         //Checks if each point of interest is inside the max distance (d_max) set by the user
-        pointOfInterest.removeIf(poi -> Math.pow(allPoiNear.d_max(), 2) < Math.pow((poi.getX() - allPoiNear.x()), 2) + Math.pow((poi.getY() - allPoiNear.y()), 2));
+        pointOfInterest.removeIf(poi -> Math.pow(allPoiNear.d_max(), 2) <= Math.pow((poi.getX() - allPoiNear.x()), 2) + Math.pow((poi.getY() - allPoiNear.y()), 2));
         return pointOfInterest;
     }
 }
