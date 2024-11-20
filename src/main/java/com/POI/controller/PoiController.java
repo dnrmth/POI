@@ -12,6 +12,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/poi")
 public class PoiController {
@@ -25,7 +27,7 @@ public class PoiController {
 
     @PostMapping
     public ResponseEntity<String> createPointOfInterest(@RequestBody CreatePoiData poiData){
-        poiService.creatPointOfInterest(poiData);
+        poiService.createPointOfInterest(poiData);
         return ResponseEntity.ok("Point of Interest Registered");
     }
 
@@ -34,11 +36,10 @@ public class PoiController {
         return ResponseEntity.ok(poiService.getAllPoi(pageable));
     }
 
-    @GetMapping("/near")
-    public ResponseEntity getPoiNear(@RequestParam AllPoiNear allPoiNear){
-        poiService.getPoiNear(allPoiNear);
+    @PostMapping("/near")
+    public ResponseEntity<List<PoiEntity>> getPoiNear(@RequestBody AllPoiNear allPoiNear){
 
-        return ResponseEntity.ok("sexo");
+        return ResponseEntity.ok(poiService.getPoiNear(allPoiNear));
     }
 
 }
