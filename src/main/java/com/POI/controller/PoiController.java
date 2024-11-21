@@ -20,7 +20,6 @@ public class PoiController {
 
     private final PoiService poiService;
 
-    @Autowired
     public PoiController(PoiService poiService) {
         this.poiService = poiService;
     }
