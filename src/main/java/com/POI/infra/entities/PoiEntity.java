@@ -1,4 +1,4 @@
-package com.POI.entities;
+package com.POI.infra.entities;
 import com.POI.dto.CreatePoiData;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

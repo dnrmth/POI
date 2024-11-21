@@ -1,6 +1,6 @@
-package com.POI.repository;
+package com.POI.infra.repository;
 
-import com.POI.entities.PoiEntity;
+import com.POI.infra.entities.PoiEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

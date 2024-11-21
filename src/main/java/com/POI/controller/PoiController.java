@@ -3,7 +3,7 @@ package com.POI.controller;
 import com.POI.dto.AllPoiNear;
 import com.POI.dto.CreatePoiData;
 import com.POI.dto.GetAllPoiData;
-import com.POI.entities.PoiEntity;
+import com.POI.infra.entities.PoiEntity;
 import com.POI.service.PoiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
